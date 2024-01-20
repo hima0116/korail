@@ -1,4 +1,4 @@
-IMAGE_NAME := geunsam2/korailbot:latest
+IMAGE_NAME := hima0116/korail:v1
 
 help:           ## Show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
