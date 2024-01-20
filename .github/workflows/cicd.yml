@@ -53,4 +53,4 @@ jobs:
                     -e BOTTOKEN='${{ secrets.TELEGRAM_BOTTOKEN }}' \
                     -e ALLOW_LIST='${{ vars.ALLOW_LIST }}' \
                     --name korailreserve \
-                    geunsam2/korailbot:latest
+                    hima0116/korailbot:latest
