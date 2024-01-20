@@ -30,7 +30,7 @@ jobs:
             file: ./Dockerfile
             platforms: linux/amd64
             push: true
-            tags: geunsam2/korailbot:latest
+            tags: hima0116/korail:v1
 
     - 
         name: SSH Remote Commands
@@ -43,7 +43,7 @@ jobs:
             timeout: 40s  # 30초 기본        
             script: |
                 docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
-                docker pull geunsam2/korailbot:latest
+                docker pull hima0116/korail:v1
                 docker rm -f korailreserve
                 docker run -it -d \
                     -p 8080:8080 \
@@ -53,4 +53,4 @@ jobs:
                     -e BOTTOKEN='${{ secrets.TELEGRAM_BOTTOKEN }}' \
                     -e ALLOW_LIST='${{ vars.ALLOW_LIST }}' \
                     --name korailreserve \
-                    geunsam2/korailbot:latest
+                    hima0116/korail:v1
