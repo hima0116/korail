@@ -1,0 +1,5 @@
+*.ipynb
+*.pyc
+certs_real/*
+*.pem
+botToken.py
