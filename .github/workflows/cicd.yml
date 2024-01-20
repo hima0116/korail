@@ -43,7 +43,7 @@ jobs:
             timeout: 40s  # 30초 기본        
             script: |
                 docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
-                docker pull geunsam2/korailbot:latest
+                docker pull hima0116/korailbot:latest
                 docker rm -f korailreserve
                 docker run -it -d \
                     -p 8080:8080 \
